@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`kwc-challenge-card`
+To display a building challenge, and indicate whether the user has completed this or not.
+
+@demo demo/index.html
+-->
+
+<dom-module id="kwc-challenge-card">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'kwc-challenge-card',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'kwc-challenge-card',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
