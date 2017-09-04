@@ -22,10 +22,29 @@
       <demo-snippet>
         <template>
             <kwc-challenge-card
+              style="margin: auto"
               label="Challenge Card"
-              assetspath="https://www.tonymacx86.com/data/avatars/l/1342/"
-              challenge='{ "title": "Chatterbox", "slug": "pixel_talking_mouth","image": "1342909.jpg", "dependencies": ["microphone"], "category": "kano-code-challenges-pixel-basic","products": ["lightboard","RPK"]}'
-              ></kwc-challenge-card>
+              imgurl="https://www.tonymacx86.com/data/avatars/l/1342/1342909.jpg"
+              title="Chatterbox"
+              challegeid="pixel_talking_mouth"
+            ></kwc-challenge-card>
+          </div>
+        </template>
+      </demo-snippet>
+    </div>
+    
+    <div class="vertical-section-container centered">
+      <h3>kwc-challenge-card with challenge creator</h3>
+      <demo-snippet>
+        <template>
+            <kwc-challenge-card
+              style="margin: auto"
+              label="Challenge Card"
+              imgurl="https://www.tonymacx86.com/data/avatars/l/1342/1342909.jpg"
+              title="Chatterbox"
+              challegeid="pixel_talking_mouth"
+              creator="Kano team"
+            ></kwc-challenge-card>
           </div>
         </template>
       </demo-snippet>
@@ -36,9 +55,11 @@
       <demo-snippet>
         <template>
             <kwc-challenge-card
+              style="margin: auto"
               label="Challenge Card"
-              assetspath="https://www.tonymacx86.com/data/avatars/l/1342/"
-              challenge='{ "title": "Chatterbox", "slug": "pixel_talking_mouth","image": "1342909.jpg", "dependencies": ["microphone"], "category": "kano-code-challenges-pixel-basic","products": ["lightboard","RPK"]}'
+              imgurl="https://www.tonymacx86.com/data/avatars/l/1342/1342909.jpg"
+              title="Chatterbox"
+              challegeid="pixel_talking_mouth"
               completed
               ></kwc-challenge-card>
           </div>
@@ -51,8 +72,9 @@
         <demo-snippet>
           <template>
               <kwc-challenge-card
+                style="margin: auto"
                 label="Challenge Card"
-                ></kwc-challenge-card>
+              ></kwc-challenge-card>
             </div>
           </template>
         </demo-snippet>
