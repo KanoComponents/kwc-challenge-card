@@ -12,17 +12,51 @@
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
     <link rel="import" href="../kwc-challenge-card.html">
 
-    <style is="custom-style" include="demo-pages-shared-styles">
-    </style>
+    <style is="custom-style" include="demo-pages-shared-styles"></style>
+
   </head>
   <body>
+
     <div class="vertical-section-container centered">
-      <h3>Basic kwc-challenge-card demo</h3>
+      <h3>kwc-challenge-card with challenge data not completed</h3>
       <demo-snippet>
         <template>
-          <kwc-challenge-card></kwc-challenge-card>
+            <kwc-challenge-card
+              label="Challenge Card"
+              assetspath="https://www.tonymacx86.com/data/avatars/l/1342/"
+              challenge='{ "title": "Chatterbox", "slug": "pixel_talking_mouth","image": "1342909.jpg", "dependencies": ["microphone"], "category": "kano-code-challenges-pixel-basic","products": ["lightboard","RPK"]}'
+              ></kwc-challenge-card>
+          </div>
         </template>
       </demo-snippet>
     </div>
+    
+    <div class="vertical-section-container centered">
+      <h3>kwc-challenge-card completed set</h3>
+      <demo-snippet>
+        <template>
+            <kwc-challenge-card
+              label="Challenge Card"
+              assetspath="https://www.tonymacx86.com/data/avatars/l/1342/"
+              challenge='{ "title": "Chatterbox", "slug": "pixel_talking_mouth","image": "1342909.jpg", "dependencies": ["microphone"], "category": "kano-code-challenges-pixel-basic","products": ["lightboard","RPK"]}'
+              completed
+              ></kwc-challenge-card>
+          </div>
+        </template>
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+        <h3>kwc-challenge-card no data</h3>
+        <demo-snippet>
+          <template>
+              <kwc-challenge-card
+                label="Challenge Card"
+                ></kwc-challenge-card>
+            </div>
+          </template>
+        </demo-snippet>
+      </div>
+      
   </body>
 </html>

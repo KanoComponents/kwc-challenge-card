@@ -1,4 +1,8 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../iron-image/iron-image.html">
+<link rel="import" href="../web-components/kano-style/kano-style.html">
+<link rel="import" href="../web-components/kano-icons/kano-icons.html">
 
 <!--
 `kwc-challenge-card`
@@ -9,26 +13,123 @@ To display a building challenge, and indicate whether the user has completed thi
 
 <dom-module id="kwc-challenge-card">
   <template>
+
     <style>
-      :host {
-        display: block;
-      }
+        :host {
+            @apply --layout-vertical;
+            border-radius: 3px;
+            background-color: white;
+            overflow: hidden;
+            transform: translateZ(0);
+            margin: auto;
+        }
+        :host .kwc-cc {
+          width: var(--kwc-cc-width, 184px);
+          margin: auto;
+          cursor: pointer;
+        }
+        :host .title,
+        .card-content {
+            color: var(--color-black);
+            margin: 0;
+            font-size: 12px;
+            text-decoration: none;
+        }
+        :host .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        :host .cover,
+        :host .cover > iron-image {
+            background-color: inherit;
+            width: 100%;
+            z-index: 0;
+            height: var(--kwc-cc-cover-height, 176px);
+        }
+        :host .cover {
+            position: relative;
+        }
+        :host .info {
+            @apply --layout-flex;
+            border-width: 0 1px 1px 1px;
+            border-style: solid;
+            border-color: var(--color-grey-lighter);
+            position: relative;
+        }
+        :host .header {
+            @apply --layout-horizontal;
+            @apply --layout-justified;
+            @apply --layout-center;
+            padding: 12px 8px 8px 8px;
+        }
+        :host .tick {
+            color: white;
+            background-color: var(--color-sushi);
+            border-radius: 100%;
+            height: 12px;
+            padding: 4px;
+            width: 12px;
+        }
+        :host([completed]) .kwc-cc {
+            background-color: var(--color-grassland);
+        }
+        :host([completed]) .title,
+        :host([completed]) .card-content {
+            color: white;
+        }
+        :host([completed]) .info {
+            border-color: var(--color-grassland);
+        }
+        :host[hidden] {
+            display: none !important;
+        }
+        @media screen and (max-width: 680px) {
+            :host {
+                width: 285px;
+            }
+        }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <div class="kwc-cc-container">
+      <div class="kwc-cc">
+        <div class="cover">
+          <template is="dom-if" if="[[assetspath]][[challenge.image]]">
+            <iron-image style="background-color: lightgray;"
+              src="[[assetspath]][[challenge.image]]" sizing="cover" preload fade></iron-image>
+          </template>
+        </div>
+        <div class="info">
+          <div class="header">
+            <h4 class="title" id="title">{{challenge.title}}</h4>
+              <template is="dom-if" if="[[completed]]">
+                <iron-icon class="tick" icon="kano-icons:tick"></iron-icon>
+              </template>
+            </div>
+            <p class="card-content" hidden$="[[!challenge.creator]]">by [[challenge.creator]]</p>
+        </div>
+      </div>
+    </div>
   </template>
 
   <script>
     Polymer({
-
       is: 'kwc-challenge-card',
-
       properties: {
-        prop1: {
+        assetspath: {
           type: String,
-          value: 'kwc-challenge-card',
+          value: '/static'
         },
-      },
-
+        challenge: {
+          type: Object,
+          value: null
+        },
+        completed: {
+          type: Boolean
+        },
+        label: {
+          type: String,
+          value: null
+        },
+      }
     });
   </script>
 </dom-module>

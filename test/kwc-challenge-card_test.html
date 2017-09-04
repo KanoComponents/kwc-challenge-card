@@ -18,10 +18,30 @@
       </template>
     </test-fixture>
 
+    <test-fixture id="default">
+        <template>
+            <kwc-challenge-card style="margin: auto"
+            label="Challenge Card"
+            assetspath="https://www.tonymacx86.com/data/avatars/l/1342/"
+            challenge='{ "title": "Chatterbox", "slug": "pixel_talking_mouth","image": "1342909.jpg", "dependencies": ["microphone"], "category": "kano-code-challenges-pixel-basic","products": ["lightboard","RPK"]}'
+            ></kwc-challenge-card>
+        </template>
+    </test-fixture>
+
     <script>
       suite('kwc-challenge-card', function() {
         test('instantiating the element works', function() {
           var element = fixture('basic');
+          assert.equal(element.is, 'kwc-challenge-card');
+        });
+      });
+      suite('default', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('default');
+          assert.equal(element.is, 'kwc-challenge-card');
+        });
+        test('instantiating the element works', function() {
+          var element = fixture('default');
           assert.equal(element.is, 'kwc-challenge-card');
         });
       });

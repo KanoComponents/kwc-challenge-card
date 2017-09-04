@@ -1,21 +1,29 @@
 # \<kwc-challenge-card\>
 
+## Purpose:
 To display a building challenge, and indicate whether the user has completed this or not.
 
-## Install the Polymer-CLI
+## Variants:
+* complete
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your element locally.
+## Properties
+* assetspath (String)
+* challenge (Object)
+* completed (Boolean)
+* label (String)
 
-## Viewing Your Element
+This component exposes to properties to set the height and width of the element
+* --kwc-cc-width
+* --kwc-cc-cover-height
 
-```
-$ polymer serve
-```
+
+## Installation
+* Clone this repository.
+* Run `bower i`
+* Make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your element locally.
 
 ## Running Tests
 
 ```
-$ polymer test
+$ polymer test --skip-plugin junit-reporter
 ```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
