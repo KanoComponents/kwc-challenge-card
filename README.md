@@ -7,8 +7,8 @@ To display a building challenge, and indicate whether it is completed not.
 * complete
 
 ## Properties
-* challengeid (String): Unique challenge identifier. Currently the challenge slug. 
-* imgurl (String): Url to image for challenge cover.
+* challengeId (String): Unique challenge identifier. Currently the challenge slug. 
+* imgUrl (String): Url to image for challenge cover.
 * title (String): Title for this challenge
 * completed (Boolean): Should the card show the complete icon and styles?
 * creator (String): of the challenge
