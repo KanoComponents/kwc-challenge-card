@@ -11,5 +11,16 @@
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
     "web-component-tester": "Polymer/web-component-tester#^6.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "resolutions": {
+    "iron-component-page": "^1.0.0",
+    "polymer": "^1.9.0",
+    "webcomponentsjs": "^0.7.24",
+    "iron-location": "1 - 2",
+    "iron-flex-layout": "1 - 2",
+    "iron-doc-viewer": "^1.0.1",
+    "iron-iconset-svg": "^2.0.1",
+    "iron-icon": "^2.0.1",
+    "paper-button": "^2.0.0"
   }
 }
