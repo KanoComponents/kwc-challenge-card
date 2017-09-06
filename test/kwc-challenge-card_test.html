@@ -21,7 +21,6 @@
     <test-fixture id="default">
         <template>
           <kwc-challenge-card
-            style="margin: auto"
             label="Challenge Card"
             imgurl="https://www.tonymacx86.com/data/avatars/l/1342/1342909.jpg"
             title="Chatterbox"
@@ -33,7 +32,6 @@
     <test-fixture id="completed">
         <template>
           <kwc-challenge-card
-            style="margin: auto"
             label="Challenge Card"
             imgurl="https://www.tonymacx86.com/data/avatars/l/1342/1342909.jpg"
             title="Chatterbox"
@@ -62,7 +60,7 @@
           var titleElm = Polymer.dom(element.root).querySelector('#title');
           assert.equal(titleElm.textContent, 'Chatterbox');
         });
-        test('challenge is not showing completed icon', function() {
+        test('challenge is not showing completed icon', function(done) {
           flush(function() {
             var iconElms = Polymer.dom(element.root).querySelectorAll('iron-icon');
             assert.lengthOf(iconElms, 0);
@@ -78,7 +76,7 @@
         test('instantiating the element works', function() {
           assert.equal(element.is, 'kwc-challenge-card');
         });
-        test('challenge is showing completed icon', function() {
+        test('challenge is showing completed icon', function(done) {
           flush(function() {
             var iconElms = Polymer.dom(element.root).querySelectorAll('iron-icon');
             assert.lengthOf(iconElms, 1);
