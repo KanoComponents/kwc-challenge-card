@@ -17,14 +17,14 @@ To display a building challenge, and indicate whether the user has completed thi
         <style>
              :host {
                 @apply --layout-vertical;
-                border-radius: 3px;
                 background-color: white;
-                overflow: hidden;
                 transform: translateZ(0);
             }
 
             .kwc-cc {
-                width: var(--kwc-cc-width, 184px);
+                border-radius: 3px;
+                overflow: hidden;
+                width: 100%;
                 margin: auto;
                 cursor: pointer;
             }
@@ -47,7 +47,7 @@ To display a building challenge, and indicate whether the user has completed thi
                 background-color: inherit;
                 width: 100%;
                 z-index: 0;
-                height: var(--kwc-cc-cover-height, 176px);
+                height: var(--kwc-cc-cover-height, 200px);
             }
 
             .cover {
@@ -103,7 +103,7 @@ To display a building challenge, and indicate whether the user has completed thi
         </style>
         <div class="kwc-cc">
             <div class="cover">
-                <iron-image 
+                <iron-image
                     style="background-color: lightgray;"
                     src="[[_imageUrl]]"
                     sizing="cover"
